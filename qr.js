@@ -5,7 +5,7 @@ const questions = [
   "4. Anh có cảm thấy mình được yêu không?",
   "5. Anh thích điểm gì ở em?",
   "6. Anh nghĩ tình yêu là gì và gia đình là gì?",
-  "7. Anh từng nghĩ nếu không gặp em,sẽ yêu được người tốt hơn?",
+  "7. Anh từng nghĩ nếu không gặp em,sẽ gặp được người tốt hơn?",
   "8. Nếu chúng mình phải xa nhau anh sẽ như nào?",
   "9. Anh tin là mình sẽ hạnh phúc chứ?",
   "10. Có điều gì anh muốn nói với em không?",
@@ -34,4 +34,5 @@ setInterval(() => {
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 6000);
 }, 200);
+
 
