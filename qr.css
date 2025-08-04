@@ -1,0 +1,95 @@
+/* Body và nền */
+body {
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Nền mờ, ảnh đẹp */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1529253355930-d5ad6d4b45a7?auto=format&fit=crop&w=1950&q=80")
+    no-repeat center center;
+  background-size: cover;
+  filter: brightness(0.3) blur(4px);
+  z-index: -1;
+}
+
+/* Trái tim bay */
+.heart {
+  position: absolute;
+  color: pink;
+  animation: float 6s linear forwards;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Câu hỏi */
+.question {
+  position: absolute;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff80c0, 0 0 20px #ff80c0,
+    0 0 30px #ff4da6;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: dropToMiddle 2.5s ease-out forwards, flicker 2s infinite;
+  pointer-events: none;
+}
+
+/* Chữ rơi từ -50px xuống 50% chiều cao rồi dừng */
+@keyframes dropToMiddle {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  22%,
+  24%,
+  55% {
+    opacity: 0.7;
+  }
+}
