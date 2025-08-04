@@ -47,7 +47,7 @@ body {
 .question {
   position: absolute;
   left: 50%;
-  font-size: 40px;
+  font-size: 32px;
   color: white;
   white-space: nowrap;
   text-align: center;
@@ -93,3 +93,4 @@ body {
     opacity: 0.7;
   }
 }
+
